@@ -18,12 +18,22 @@ struct RecipeBook {
         let params = [
             "type": "public",
             "q": recipe,
-            "app_id": UserDefaults.standard.string(forKey: "app_id"),
-            "app_key": UserDefaults.standard.string(forKey: "app_key")
+            "app_id": Bundle.main.object(forInfoDictionaryKey: "app_id") as! String,
+            "app_key": Bundle.main.object(forInfoDictionaryKey: "app_key") as! String
         ]
         
         AF.request(URL(string: url)!, method: .get, parameters: params).response { response in
-            print(response.result)
+            
+            if let value = response.value {
+                if let data = value {
+                    let json = JSON(data)
+                    if let hits = json["hits"].array {
+                        for hit in hits {
+                            print(hit)
+                        }
+                    }
+                }
+            }
         }
     }
 }
