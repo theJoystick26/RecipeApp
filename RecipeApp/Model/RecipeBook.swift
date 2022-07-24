@@ -9,13 +9,16 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
+protocol RecipeBookDelegate {
+    func didFetchRecipes(_ recipeBook: RecipeBook, _ recipes: [Recipe])
+    func didFailWithError(_ error: Error)
+}
+
 class RecipeBook {
     private let url = "https://api.edamam.com/api/recipes/v2"
-    var recipes: [Recipe] = []
+    var delegate: RecipeBookDelegate?
     
-    func fetchRecipes(with recipe: String) {
-        print("Function called.")
-        
+    func performRequest(with recipe: String) {
         let params = [
             "type": "public",
             "q": recipe,
@@ -28,23 +31,27 @@ class RecipeBook {
             if let value = response.value {
                 if let data = value {
                     let json = JSON(data)
-                    self.parseJSON(json)
+                    if let recipes = self.parseJSON(json) {
+                        self.delegate?.didFetchRecipes(self, recipes)
+                    }
                 }
             }
         }
     }
     
-    func parseJSON(_ json: JSON) {
+    func parseJSON(_ json: JSON) -> [Recipe]? {
+        var arr: [Recipe] = []
+        
         if let hits = json["hits"].array {
             for hit in hits {
                 if let name = hit["recipe"]["label"].string, let imageUrl = hit["recipe"]["image"].string, let yield = hit["recipe"]["yield"].float, let ingredients = hit["recipe"]["ingredientLines"].arrayObject as? [String], let calories = hit["recipe"]["calories"].float, let totalTime = hit["recipe"]["totalTime"].float {
                     let recipe = Recipe(name, imageUrl, yield, ingredients, calories, totalTime)
                     
-                    recipes.append(recipe)
+                    arr.append(recipe)
                 }
             }
         }
         
-        print(recipes)
+        return arr;
     }
 }

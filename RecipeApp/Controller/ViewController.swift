@@ -7,18 +7,30 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    
+class ViewController: UIViewController, RecipeBookDelegate {
     let recipeBook = RecipeBook()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        print("View loaded.")
+     
+        recipeBook.delegate = self
         
-        recipeBook.fetchRecipes(with: "chicken")
+        recipeBook.performRequest(with: "chicken")
     }
-
-
+    
+    // MARK : - Recipe Book Delegate Methods
+    
+    func didFetchRecipes(_ recipeBook: RecipeBook, _ recipes: [Recipe]) {
+        DispatchQueue.main.async {
+            for recipe in recipes {
+                print(recipe)
+            }
+        }
+    }
+    
+    func didFailWithError(_ error: Error) {
+        print(error)
+    }
+    
 }
 
