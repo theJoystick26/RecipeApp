@@ -27,6 +27,10 @@ class RecipeBook {
         ]
         
         AF.request(URL(string: url)!, method: .get, parameters: params).response { response in
+            if response.error != nil {
+                self.delegate?.didFailWithError(response.error!)
+                return
+            }
             
             if let value = response.value {
                 if let data = value {
