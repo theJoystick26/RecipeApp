@@ -14,6 +14,7 @@
 		5828B688288C7B55002EE580 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5828B687288C7B55002EE580 /* Assets.xcassets */; };
 		5828B68B288C7B55002EE580 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5828B689288C7B55002EE580 /* LaunchScreen.storyboard */; };
 		586F3EF6288C7DF80030BFE7 /* RecipeBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586F3EF5288C7DF80030BFE7 /* RecipeBook.swift */; };
+		58C41EF8288CB69500F49C27 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C41EF7288CB69500F49C27 /* Recipe.swift */; };
 		D89B4A16BB3C4B95F5F0446C /* Pods_RecipeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FEFD8F7DB4DFFF968A3F92A /* Pods_RecipeApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		5828B68C288C7B55002EE580 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		586F3EF5288C7DF80030BFE7 /* RecipeBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeBook.swift; sourceTree = "<group>"; };
 		58A2076E79F86742D38FF464 /* Pods-RecipeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeApp.debug.xcconfig"; path = "Target Support Files/Pods-RecipeApp/Pods-RecipeApp.debug.xcconfig"; sourceTree = "<group>"; };
+		58C41EF7288CB69500F49C27 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		8FEFD8F7DB4DFFF968A3F92A /* Pods_RecipeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				586F3EF5288C7DF80030BFE7 /* RecipeBook.swift */,
+				58C41EF7288CB69500F49C27 /* Recipe.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				5828B67F288C7B54002EE580 /* AppDelegate.swift in Sources */,
 				586F3EF6288C7DF80030BFE7 /* RecipeBook.swift in Sources */,
 				5828B681288C7B54002EE580 /* SceneDelegate.swift in Sources */,
+				58C41EF8288CB69500F49C27 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

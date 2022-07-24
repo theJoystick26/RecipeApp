@@ -9,8 +9,9 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-struct RecipeBook {
-    let url = "https://api.edamam.com/api/recipes/v2"
+class RecipeBook {
+    private let url = "https://api.edamam.com/api/recipes/v2"
+    var recipes: [Recipe] = []
     
     func fetchRecipes(with recipe: String) {
         print("Function called.")
@@ -27,13 +28,23 @@ struct RecipeBook {
             if let value = response.value {
                 if let data = value {
                     let json = JSON(data)
-                    if let hits = json["hits"].array {
-                        for hit in hits {
-                            print(hit)
-                        }
-                    }
+                    self.parseJSON(json)
                 }
             }
         }
+    }
+    
+    func parseJSON(_ json: JSON) {
+        if let hits = json["hits"].array {
+            for hit in hits {
+                if let name = hit["recipe"]["label"].string, let imageUrl = hit["recipe"]["image"].string, let yield = hit["recipe"]["yield"].float, let ingredients = hit["recipe"]["ingredientLines"].arrayObject as? [String], let calories = hit["recipe"]["calories"].float, let totalTime = hit["recipe"]["totalTime"].float {
+                    let recipe = Recipe(name, imageUrl, yield, ingredients, calories, totalTime)
+                    
+                    recipes.append(recipe)
+                }
+            }
+        }
+        
+        print(recipes)
     }
 }
