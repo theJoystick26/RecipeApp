@@ -20,11 +20,21 @@ class TableViewController: UITableViewController {
         textField.delegate = self
         recipeBook.delegate = self
         
+        self.registerTableViewCells()
+        tableView.rowHeight = 300
+        
         recipeBook.performRequest(with: "chicken")
     }
-
+    
+    // MARK: - Registering Custom Cell
+    
+    private func registerTableViewCells() {
+        let recipeCell = UINib(nibName: "RecipeTableViewCell", bundle: nil)
+        tableView.register(recipeCell, forCellReuseIdentifier: "RecipeCell")
+    }
+    
     // MARK: - Table View Methods
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -34,13 +44,16 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ProtoCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath) as! RecipeTableViewCell
         
-        cell.textLabel?.text = recipes[indexPath.row].name
-
+        cell.name.text = recipes[indexPath.row].name
+        cell.yield.text = recipes[indexPath.row].yield.description
+        cell.ingredients.text = recipes[indexPath.row].ingredients.joined(separator: ", ")
+        cell.calories.text = recipes[indexPath.row].calories.description
+        cell.totalTime.text = recipes[indexPath.row].totalTime.description
+        
         return cell
     }
-    
 }
 
 // MARK: - Recipe Book Delegate Methods
