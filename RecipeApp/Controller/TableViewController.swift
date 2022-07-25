@@ -48,10 +48,7 @@ class TableViewController: UITableViewController {
 extension TableViewController: RecipeBookDelegate {
     func didFetchRecipes(_ recipeBook: RecipeBook, _ recipes: [Recipe]) {
         DispatchQueue.main.async {
-            for recipe in recipes {
-                self.recipes.append(recipe)
-            }
-            
+            self.recipes = recipes
             self.tableView.reloadData()
         }
     }
