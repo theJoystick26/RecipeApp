@@ -13,10 +13,10 @@ struct Recipe {
     let imageUrl: String
     let yield: Int
     let ingredients: [String]
-    let calories: Float
+    let calories: Int
     let totalTime: Int
     
-    init(_ name: String, _ imageUrl: String, _ yield: Int, _ ingredients: [String], _ calories: Float, _ totalTime: Int) {
+    init(_ name: String, _ imageUrl: String, _ yield: Int, _ ingredients: [String], _ calories: Int, _ totalTime: Int) {
         self.name = name
         self.imageUrl = imageUrl
         self.yield = yield
