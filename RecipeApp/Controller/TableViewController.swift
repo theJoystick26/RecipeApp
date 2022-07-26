@@ -17,6 +17,8 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        textField.autocapitalizationType = .words
+        
         textField.delegate = self
         recipeBook.delegate = self
         
@@ -74,5 +76,27 @@ extension TableViewController: RecipeBookDelegate {
 // MARK: - UITextField Delegate Methods
 
 extension TableViewController: UITextFieldDelegate {
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if textField.text == "" {
+            textField.placeholder = "Type something..."
+            return false
+        }
+        return true
+    }
     
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if let recipe = textField.text {
+            recipeBook.performRequest(with: recipe)
+        }
+        textField.text = ""
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
 }
