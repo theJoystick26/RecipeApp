@@ -24,7 +24,7 @@ class TableViewController: UITableViewController {
         
         self.registerTableViewCells()
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 200
+        tableView.estimatedRowHeight = 300
         
         recipeBook.performRequest(with: "chicken")
     }
