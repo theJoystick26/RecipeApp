@@ -23,6 +23,7 @@ class TableViewController: UITableViewController {
         recipeBook.delegate = self
         
         self.registerTableViewCells()
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 300
         
         recipeBook.performRequest(with: "chicken")
@@ -55,10 +56,6 @@ class TableViewController: UITableViewController {
         cell.totalTime.text = recipes[indexPath.row].totalTime.description
         
         return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
     }
 }
 

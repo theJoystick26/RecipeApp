@@ -35,7 +35,7 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="xeO-fx-rtQ" firstAttribute="leading" secondItem="Igh-zG-qeE" secondAttribute="leading" constant="20" id="C3H-dk-Dx1"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xeO-fx-rtQ" secondAttribute="trailing" id="SRS-Um-IBZ"/>
+                                            <constraint firstItem="xeO-fx-rtQ" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Igh-zG-qeE" secondAttribute="trailing" id="SRS-Um-IBZ"/>
                                             <constraint firstItem="xeO-fx-rtQ" firstAttribute="centerY" secondItem="Igh-zG-qeE" secondAttribute="centerY" id="yYf-ol-CGa"/>
                                         </constraints>
                                     </view>
@@ -140,9 +140,9 @@
                 <color key="backgroundColor" red="0.29803921568627451" green="0.22745098039215686" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="zgM-t5-ijv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="AY7-Qi-pR5"/>
-                    <constraint firstAttribute="trailing" secondItem="zgM-t5-ijv" secondAttribute="trailing" constant="10" id="GJi-FE-jKb"/>
+                    <constraint firstItem="zgM-t5-ijv" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailing" constant="-10" id="GJi-FE-jKb"/>
                     <constraint firstItem="zgM-t5-ijv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Nb3-76-LNO"/>
-                    <constraint firstAttribute="bottom" secondItem="zgM-t5-ijv" secondAttribute="bottom" constant="5" id="XEb-l9-c55"/>
+                    <constraint firstItem="zgM-t5-ijv" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottom" constant="-5" id="XEb-l9-c55"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
