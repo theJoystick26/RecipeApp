@@ -8,6 +8,7 @@
 import UIKit
 
 class RecipeTableViewCell: UITableViewCell {
+    @IBOutlet weak var recipeView: UIStackView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var yield: UILabel!
     @IBOutlet weak var ingredients: UILabel!
@@ -16,6 +17,10 @@ class RecipeTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        recipeView.layer.borderWidth = 5
+        recipeView.layer.borderColor = UIColor(named: "BorderColor")?.cgColor
+        recipeView.layer.cornerRadius = 10
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

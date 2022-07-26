@@ -11,12 +11,12 @@ import UIKit
 struct Recipe {
     let name: String
     let imageUrl: String
-    let yield: Float
+    let yield: Int
     let ingredients: [String]
     let calories: Float
-    let totalTime: Float
+    let totalTime: Int
     
-    init(_ name: String, _ imageUrl: String, _ yield: Float, _ ingredients: [String], _ calories: Float, _ totalTime: Float) {
+    init(_ name: String, _ imageUrl: String, _ yield: Int, _ ingredients: [String], _ calories: Float, _ totalTime: Int) {
         self.name = name
         self.imageUrl = imageUrl
         self.yield = yield
