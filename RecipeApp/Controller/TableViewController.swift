@@ -17,7 +17,10 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        textField.autocapitalizationType = .words
+        textField.attributedPlaceholder = NSAttributedString(
+            string: "What do you want to eat...",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "TextColor")!]
+        )
         
         textField.delegate = self
         recipeBook.delegate = self
