@@ -21,13 +21,13 @@
                         <rect key="frame" x="10" y="5" width="300" height="290"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="h8W-LG-OvL" userLabel="Intro View">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="145"/>
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="178.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Igh-zG-qeE" userLabel="Name View">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="145"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="178.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xeO-fx-rtQ">
-                                                <rect key="frame" x="20" y="58" width="61.5" height="29.5"/>
+                                                <rect key="frame" x="20" y="74.5" width="61.5" height="29.5"/>
                                                 <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="24"/>
                                                 <color key="textColor" name="TextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -40,21 +40,21 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3I9-Fa-Ql6" userLabel="Stats View">
-                                        <rect key="frame" x="150" y="0.0" width="150" height="145"/>
+                                        <rect key="frame" x="150" y="0.0" width="150" height="178.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7ul-S5-gcP" userLabel="Time View">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="145"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="178.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="OOD-8e-tfZ">
-                                                        <rect key="frame" x="0.0" y="-3" width="50" height="78.5"/>
+                                                        <rect key="frame" x="0.0" y="-3" width="50" height="95.5"/>
                                                         <color key="tintColor" name="TextColor"/>
                                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                                     </imageView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mXI-sb-bCX">
-                                                        <rect key="frame" x="0.0" y="72.5" width="50" height="72.5"/>
+                                                        <rect key="frame" x="0.0" y="89.5" width="50" height="89"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Time" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRE-3U-8Xb">
-                                                                <rect key="frame" x="-16.5" y="25.5" width="83.5" height="22"/>
+                                                                <rect key="frame" x="-16.5" y="33.5" width="83.5" height="22"/>
                                                                 <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="18"/>
                                                                 <color key="textColor" name="TextColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -68,18 +68,18 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rV2-h6-ta4" userLabel="Yield View">
-                                                <rect key="frame" x="50" y="0.0" width="50" height="145"/>
+                                                <rect key="frame" x="50" y="0.0" width="50" height="178.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.3" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="njb-zz-SGA">
-                                                        <rect key="frame" x="0.0" y="-2" width="50" height="76.5"/>
+                                                        <rect key="frame" x="0.0" y="-2" width="50" height="93.5"/>
                                                         <color key="tintColor" name="TextColor"/>
                                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                                     </imageView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eYW-0i-kIT">
-                                                        <rect key="frame" x="0.0" y="72.5" width="50" height="72.5"/>
+                                                        <rect key="frame" x="0.0" y="89.5" width="50" height="89"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yield" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52n-1A-WIQ">
-                                                                <rect key="frame" x="5.5" y="25.5" width="39.5" height="22"/>
+                                                                <rect key="frame" x="5.5" y="33.5" width="39.5" height="22"/>
                                                                 <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="18"/>
                                                                 <color key="textColor" name="TextColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -93,18 +93,18 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jPV-uB-lgd" userLabel="Calories View">
-                                                <rect key="frame" x="100" y="0.0" width="50" height="145"/>
+                                                <rect key="frame" x="100" y="0.0" width="50" height="178.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flame" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dMG-w6-0is">
-                                                        <rect key="frame" x="0.0" y="-4.5" width="50" height="79.5"/>
+                                                        <rect key="frame" x="0.0" y="-4.5" width="50" height="96.5"/>
                                                         <color key="tintColor" name="TextColor"/>
                                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                                     </imageView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PzY-8q-WT9">
-                                                        <rect key="frame" x="0.0" y="72.5" width="50" height="72.5"/>
+                                                        <rect key="frame" x="0.0" y="89.5" width="50" height="89"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84q-bt-4MV">
-                                                                <rect key="frame" x="-6.5" y="25.5" width="63.5" height="22"/>
+                                                                <rect key="frame" x="-6.5" y="33.5" width="63.5" height="22"/>
                                                                 <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="18"/>
                                                                 <color key="textColor" name="TextColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -118,11 +118,35 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="jPV-uB-lgd" firstAttribute="leading" secondItem="rV2-h6-ta4" secondAttribute="trailing" id="0Bd-33-fQQ"/>
+                                            <constraint firstItem="7ul-S5-gcP" firstAttribute="top" secondItem="3I9-Fa-Ql6" secondAttribute="top" id="659-JD-qTg"/>
+                                            <constraint firstItem="7ul-S5-gcP" firstAttribute="leading" secondItem="3I9-Fa-Ql6" secondAttribute="leading" id="Bfw-ij-4H0"/>
+                                            <constraint firstItem="rV2-h6-ta4" firstAttribute="leading" secondItem="7ul-S5-gcP" secondAttribute="trailing" id="CVh-Qu-WSe"/>
+                                            <constraint firstAttribute="trailing" secondItem="jPV-uB-lgd" secondAttribute="trailing" id="CzC-l0-B04"/>
+                                            <constraint firstAttribute="bottom" secondItem="jPV-uB-lgd" secondAttribute="bottom" id="aA1-8v-UuC"/>
+                                            <constraint firstItem="jPV-uB-lgd" firstAttribute="top" secondItem="3I9-Fa-Ql6" secondAttribute="top" id="cGX-p8-aNy"/>
+                                            <constraint firstItem="rV2-h6-ta4" firstAttribute="top" secondItem="3I9-Fa-Ql6" secondAttribute="top" id="faU-Bq-SO3"/>
+                                            <constraint firstAttribute="bottom" secondItem="rV2-h6-ta4" secondAttribute="bottom" id="nkd-86-ine"/>
+                                            <constraint firstItem="rV2-h6-ta4" firstAttribute="leading" secondItem="7ul-S5-gcP" secondAttribute="trailing" id="nmY-XG-Xvx"/>
+                                            <constraint firstItem="jPV-uB-lgd" firstAttribute="leading" secondItem="rV2-h6-ta4" secondAttribute="trailing" id="wAT-gt-uuJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="7ul-S5-gcP" secondAttribute="bottom" id="wsG-dF-JxY"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="3I9-Fa-Ql6" secondAttribute="bottom" id="2Di-xC-wY3"/>
+                                    <constraint firstItem="Igh-zG-qeE" firstAttribute="leading" secondItem="h8W-LG-OvL" secondAttribute="leading" id="2OP-Qr-N3G"/>
+                                    <constraint firstItem="3I9-Fa-Ql6" firstAttribute="leading" secondItem="Igh-zG-qeE" secondAttribute="trailing" id="CJV-Wv-28n"/>
+                                    <constraint firstItem="3I9-Fa-Ql6" firstAttribute="top" secondItem="h8W-LG-OvL" secondAttribute="top" id="Lfa-l2-QRG"/>
+                                    <constraint firstItem="Igh-zG-qeE" firstAttribute="top" secondItem="h8W-LG-OvL" secondAttribute="top" id="OnG-c0-E0L"/>
+                                    <constraint firstAttribute="trailing" secondItem="3I9-Fa-Ql6" secondAttribute="trailing" id="YJs-qY-gXu"/>
+                                    <constraint firstItem="3I9-Fa-Ql6" firstAttribute="leading" secondItem="Igh-zG-qeE" secondAttribute="trailing" id="ciq-hJ-ETa"/>
+                                    <constraint firstAttribute="bottom" secondItem="Igh-zG-qeE" secondAttribute="bottom" id="zBn-cd-oHI"/>
+                                </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNT-TP-RJM" userLabel="Ingredients View">
-                                <rect key="frame" x="0.0" y="145" width="300" height="145"/>
+                                <rect key="frame" x="0.0" y="178.5" width="300" height="111.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ed6-qB-v49">
                                         <rect key="frame" x="20" y="20" width="260" height="17.5"/>
@@ -144,10 +168,10 @@
                             <constraint firstItem="lNT-TP-RJM" firstAttribute="top" secondItem="h8W-LG-OvL" secondAttribute="bottom" id="4kB-fT-pX2"/>
                             <constraint firstItem="h8W-LG-OvL" firstAttribute="leading" secondItem="zgM-t5-ijv" secondAttribute="leading" id="B42-N2-ai9"/>
                             <constraint firstAttribute="bottom" secondItem="lNT-TP-RJM" secondAttribute="bottom" id="HX1-CT-V8E"/>
+                            <constraint firstItem="h8W-LG-OvL" firstAttribute="top" secondItem="zgM-t5-ijv" secondAttribute="top" constant="10" id="Lij-cE-auA"/>
                             <constraint firstItem="lNT-TP-RJM" firstAttribute="leading" secondItem="zgM-t5-ijv" secondAttribute="leading" id="M0Z-rH-tQJ"/>
                             <constraint firstItem="lNT-TP-RJM" firstAttribute="top" secondItem="h8W-LG-OvL" secondAttribute="bottom" id="YNe-uU-9Uy"/>
                             <constraint firstAttribute="trailing" secondItem="h8W-LG-OvL" secondAttribute="trailing" id="eOX-e4-otz"/>
-                            <constraint firstItem="h8W-LG-OvL" firstAttribute="top" secondItem="zgM-t5-ijv" secondAttribute="top" id="kVa-bT-Hrc"/>
                             <constraint firstAttribute="trailing" secondItem="lNT-TP-RJM" secondAttribute="trailing" id="zF3-S6-bO2"/>
                         </constraints>
                     </stackView>
