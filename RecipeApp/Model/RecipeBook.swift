@@ -48,7 +48,7 @@ class RecipeBook {
         
         if let hits = json["hits"].array {
             for hit in hits {
-                if let name = hit["recipe"]["label"].string, let imageUrl = hit["recipe"]["image"].string, let yield = hit["recipe"]["yield"].float, let ingredients = hit["recipe"]["ingredientLines"].arrayObject as? [String], let calories = hit["recipe"]["calories"].float, let totalTime = hit["recipe"]["totalTime"].float {
+                if let name = hit["recipe"]["label"].string, let imageUrl = hit["recipe"]["image"].string, let yield = hit["recipe"]["yield"].int, let ingredients = hit["recipe"]["ingredientLines"].arrayObject as? [String], let calories = hit["recipe"]["calories"].int, let totalTime = hit["recipe"]["totalTime"].int {
                     let recipe = Recipe(name, imageUrl, yield, ingredients, calories, totalTime)
                     
                     arr.append(recipe)
