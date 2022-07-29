@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class TableViewController: UITableViewController {
     
@@ -27,7 +28,7 @@ class TableViewController: UITableViewController {
         
         self.registerTableViewCells()
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 300
+        tableView.estimatedRowHeight = 400
         
         recipeBook.performRequest(with: "chicken")
     }
@@ -53,10 +54,24 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath) as! RecipeTableViewCell
         
         cell.name.text = recipes[indexPath.row].name
+        // TODO: Add image
         cell.yield.text = recipes[indexPath.row].yield.description
         cell.ingredients.text = recipes[indexPath.row].ingredients.joined(separator: ", ")
         cell.calories.text = recipes[indexPath.row].calories.description
         cell.totalTime.text = recipes[indexPath.row].totalTime.description
+        
+        let processor = DownsamplingImageProcessor(size: cell.recipeImageView.bounds.size)
+
+        cell.recipeImageView.kf.indicatorType = .activity
+        
+        cell.recipeImageView.kf.setImage(
+            with: recipes[indexPath.row].imageUrl,
+            placeholder: UIImage(named: "food-loader"),
+            options: [
+                .processor(processor),
+                .scaleFactor(UIScreen.main.scale),
+                .cacheOriginalImage
+            ])
         
         return cell
     }

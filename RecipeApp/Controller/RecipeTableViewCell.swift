@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import Kingfisher
 
 class RecipeTableViewCell: UITableViewCell {
     @IBOutlet weak var recipeView: UIStackView!
     @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var recipeImageView: UIImageView!
     @IBOutlet weak var yield: UILabel!
     @IBOutlet weak var ingredients: UILabel!
     @IBOutlet weak var calories: UILabel!
