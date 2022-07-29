@@ -8,5 +8,6 @@ target 'RecipeApp' do
   # Pods for RecipeApp
 pod 'Alamofire'
 pod 'SwiftyJSON', '~> 5.0'
+pod 'Kingfisher', '~> 7.0'
 
 end
